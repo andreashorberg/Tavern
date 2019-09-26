@@ -20,7 +20,9 @@ public struct BarChart: View  {
     private var withShadow = false
     
     @State private var animatableBarUnit: CGFloat = 0.0
-    
+
+    public init() {}
+
     public func bar(color: Color?, scale: Int) -> some View {
         return Rectangle()
             .fill(color ?? .white)
