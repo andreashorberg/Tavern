@@ -99,6 +99,12 @@ public struct Bar {
     public var value: Int
     public var goal: Int?
     public var label: String?
+
+    public init(value: Int, goal: Int?, label: String?) {
+        self.value = value
+        self.goal = goal
+        self.label = label
+    }
 }
 
 public struct AxisLabel: View, Identifiable, Hashable {
@@ -107,6 +113,10 @@ public struct AxisLabel: View, Identifiable, Hashable {
     
     public var body: some View {
         Text(labelValue)
+    }
+
+    public init(labelValue: String) {
+        self.labelValue = labelValue
     }
 }
 
